@@ -9,10 +9,7 @@ copilot plugin marketplace add github/lever
 copilot plugin install lever@lever
 ```
 
-In the Copilot app, open these links. Each one asks you to confirm, then opens a pre-filled form:
-
-1. [Add the marketplace](ghapp://plugins/marketplace/add?source=github%2Flever) (`github/lever`)
-2. [Install the plugin](ghapp://plugins/install?source=lever%40lever) (`lever@lever`)
+In the Copilot app, [open this link](ghapp://plugins/install?source=lever%40lever&marketplace=github%2Flever). It asks you to confirm adding the `github/lever` marketplace and installing `lever@lever`, then opens the install form pre-filled. Click Install to finish.
 
 Or do it by hand: **Customize → + Add → Marketplace** with `github/lever`, then **+ Add → Plugin** with `lever@lever`.
 
