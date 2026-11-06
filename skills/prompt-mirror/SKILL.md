@@ -65,7 +65,7 @@ Also: `abort` events with `data.reason == "user_initiated"`; `session.start` →
    | Repeated corrections | `correction_classes`, `repeated_correction_phrases` (≥3 sessions) | Down per class |
    | Kickoffs missing done-when | `100 − kickoffs.has_done_when_pct` | Down |
    | Kickoffs missing a stop condition | `100 − kickoffs.has_stop_condition_pct` | Down |
-   | Stuck without measurement (loop smells) | `loop_smells`, `rates.stuck` vs `rates.measurement` | Fewer sessions |
+   | Stuck without measurement (loop smells) | `loop_smells`, `rates_pct_of_typed.stuck` vs `rates_pct_of_typed.measurement` | Fewer sessions |
    | Fan-out share | `rates.fanout`, `kickoffs.fanout_pct` | Context |
    | Same prompt typed again and again | `automation_candidates` (rows flagged `repeated_prompt`) | Each one is an `/lever automate` candidate |
    | Agent concessions ("You're right…") | `assistant.concessions_per_100` | A concession without a durable fix predicts a repeat |
