@@ -180,7 +180,6 @@ Use [`progress-contract`](../progress-contract/SKILL.md) and [`templates/status-
 - Report each milestone label with its state, ETA in your timezone, and evidence level (claimed < pushed < green < merged < deployed < measured).
 - Show metrics as `x → y (Δz%)`, with merged count, time since last merge, and the previous ETA vs. actual.
 - List human-only items.
-- Stay silent when nothing changed.
 
 Before you go offline, or at the end of the absence window:
 - push all branches;
