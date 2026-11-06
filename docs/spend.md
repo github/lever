@@ -27,7 +27,7 @@ Costs multiply. Estimate before you pick:
 - **Save on routine:** classification, labeling, digests, no-op checks. A run that correctly does nothing should cost almost nothing.
 - **Measure value per spend:** report useful outputs per dollar, or for a CI loop, Actions minutes spent per minute saved. Raise spend where that ratio is good, and cut it where it isn't.
 
-Below 6 complete pairs, `experiment-arms` says INCONCLUSIVE, whatever the tier. `standard` buys fewer arms, not weaker evidence.
+`standard` buys fewer arms, not weaker evidence.
 
 ## Setting it
 

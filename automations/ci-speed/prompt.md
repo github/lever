@@ -11,7 +11,7 @@ TARGET_P90_MIN:        <from baseline>
 TARGET_FIRST_TRY_PASS: <from baseline>%
 MEASURE_WINDOW:        last 7 days, busy weekday hours only
 KEEP_BAR:              critical path -1 min, or a clear cost or flake cut
-RUNS_PER_ARM:          6 paired on the same SHA             # under 6 complete pairs = INCONCLUSIVE
+RUNS_PER_ARM:          6 paired on the same SHA
 MAX_CONCURRENT_ARMS:   4                                   # never above budgets.max_parallel_arms in .github/lever.yml
 MAX_OPEN_PRS:          8
 CI_MINUTES_PER_GOAL:   <cap>
@@ -47,7 +47,7 @@ Every run ends in exactly one of ACTED(summary), NOOP(reason) or BLOCKED(reason)
 4. For each hypothesis, up to MAX_CONCURRENT_ARMS at once and inside RUN_WINDOW: open one do-not-merge PR
    with one change. Run RUNS_PER_ARM paired runs against a control on the same SHA, interleaved. Check
    that test counts and verdicts match the control. A failed or missing treatment run counts against the
-   arm. Under 6 complete pairs the arm is INCONCLUSIVE, not kept. Pause when the API quota drops below API_RATE_FLOOR.
+   arm. Under 6 complete pairs the arm is not kept. Pause when the API quota drops below API_RATE_FLOOR.
    Stop at CI_MINUTES_PER_GOAL.
 5. Keep an arm only if it clears KEEP_BAR. Record every arm, kept or rejected, with its numbers in the
    goal issue. Close rejected arms with a "[negative result]" comment.
