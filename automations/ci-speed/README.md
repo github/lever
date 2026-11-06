@@ -17,7 +17,7 @@ The watch is Copilot, so its label won't wake the lane unless that one trigger h
 
 1. **Measure what people feel:** time from push until every required check is green, at p50 and p90. Only the slowest required lane matters, so find the critical path.
 2. **One change per PR,** small and revertible, labeled do-not-merge while it's being measured.
-3. **Prove it on real CI** with paired runs on the same SHA, at least 6 per arm, with the same test counts and verdicts. Fewer is INCONCLUSIVE, and a failed treatment run counts against the arm. Keep a change only if it moves the critical path by a minute or more, or clearly cuts cost or flakes. Write down the arms that fail.
+3. **Prove it on real CI** with paired runs on the same SHA, at least 6 per arm, with the same test counts and verdicts. A failed treatment run counts against the arm. Keep a change only if it moves the critical path by a minute or more, or clearly cuts cost or flakes. Write down the arms that fail.
 4. **Run arms in parallel, decide the order later.**
 5. **Hand the stack to the owners** with the evidence in each description, landed at the resolved [autonomy level](../../docs/autonomy.md). Validate in parallel, merge in batches, and serialize only PRs that touch the same thing ([`landing-plan`](../../skills/landing-plan/SKILL.md)).
 6. **Measure again on real traffic after merge,** and post the numbers.
