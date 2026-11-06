@@ -49,7 +49,7 @@ Never ship these, whatever they save: widened `permissions:`, `pull_request_targ
 
 - [`scripts/ci_arm_driver.py`](scripts/ci_arm_driver.py) pushes all arms together each round with an identical nonce, opens draft do-not-merge PRs, polls by SHA under the rate floor, reruns failed jobs as a person would, and appends results to `arms_<tag>.jsonl`. It can resume where it left off; create `<tag>.stop` to stop. It needs git 2.38 or newer. Each run pushes to its own branches, `lever/arm-<tag>-<run id>-<arm>` by default, and only ever rewrites branches it created, with an expected-old-SHA lease on every push; it refuses to touch a branch that someone else wrote to.
 - [`scripts/ci_arm_metrics.py`](scripts/ci_arm_metrics.py) summarizes each arm's TTG, critical lane, billed minutes, first-try green rate and reruns, and writes `samples_<tag>.jsonl`.
-- [`scripts/arm_stats.py`](scripts/arm_stats.py) is metric-agnostic. It reports paired Δ vs control, failed attempts per arm, wins per round, a bootstrap CI, Mann-Whitney U, the A/A noise floor, and a KEEP / DROP / INCONCLUSIVE verdict against the bar. A treatment that fails more rounds than the control is never kept, and fewer than 6 complete pairs (`--min-pairs`) is INCONCLUSIVE. Lower is better by default; pass `--higher-is-better` for metrics like throughput.
+- [`scripts/arm_stats.py`](scripts/arm_stats.py) is metric-agnostic. It reports paired Δ vs control, failed attempts per arm, wins per round, a bootstrap CI, Mann-Whitney U, the A/A noise floor, and a KEEP / DROP / INCONCLUSIVE verdict against the bar. A treatment that fails more rounds than the control is never kept. Lower is better by default; pass `--higher-is-better` for metrics like throughput.
 
 Example config (`arms.json`):
 
