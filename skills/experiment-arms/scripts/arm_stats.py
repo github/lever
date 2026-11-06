@@ -41,7 +41,7 @@ ap.add_argument("--bar", type=float, default=0.0, help="minimum absolute improve
 ap.add_argument("--bar-pct", type=float, default=0.0, help="minimum improvement as a %% of the control median")
 ap.add_argument("--higher-is-better", action="store_true")
 ap.add_argument("--min-pairs", "--min-rounds", dest="min_pairs", type=int, default=6,
-                help="minimum complete (both arms valid) pairs before any verdict (default 6)")
+                help="minimum complete (both arms valid) pairs before a speed verdict (default 6)")
 ap.add_argument("--boot", type=int, default=5000)
 args = ap.parse_args()
 
