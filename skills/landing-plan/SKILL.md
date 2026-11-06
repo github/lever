@@ -22,7 +22,7 @@ Don't use it:
 
 ## Steps
 
-1. **Inventory.** For each PR, record the number, title, base, head branch, **head SHA**, draft state, mergeable state, review decision, unresolved threads, changed files, and checks **on that exact head**. Read dependencies from stack bases ("base = another PR's head") and from the body ("depends on #N", "after #N"). [`scripts/landing_graph.py`](scripts/landing_graph.py) does this with one `gh pr view` per PR.
+1. **Inventory.** For each PR, record the number, title, base, head branch, **head SHA**, draft state, mergeable state, review decision, unresolved threads, changed files, and checks **on that exact head**. Read dependencies from stack bases ("base = another PR's head") and from the body ("depends on #N", "after #N"). See [`scripts/landing_graph.py`](scripts/landing_graph.py).
 2. **Read the repo's landing rules.** Check for a merge queue, required approvals, CODEOWNERS, strict status checks, the allowed merge method, and any freeze window. These decide whether "land" means *enqueue*, *merge*, or *request review*.
 3. **Build the graph.** An edge `A → B` means A must land before B. Add an edge when:
    - **Stacked:** B's base is A's head branch.
