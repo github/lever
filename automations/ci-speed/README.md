@@ -29,7 +29,7 @@ The watch is Copilot, so its label won't wake the lane unless that one trigger h
 | `TARGET_P50_MIN` / `TARGET_P90_MIN` | Set from the baseline | Minutes |
 | `TARGET_FIRST_TRY_PASS` | Set from the baseline | Percent |
 | `KEEP_BAR` | Critical path −1 min, or a clear cost or flake cut | Your bar, written before measuring |
-| `RUNS_PER_ARM` | 6 paired | 6–12; under 6 is INCONCLUSIVE |
+| `RUNS_PER_ARM` | 6 paired | 6–12 |
 | `MAX_CONCURRENT_ARMS` | 4 | Never above your spend tier's lane cap or `budgets.max_parallel_arms`. Keep it low enough not to starve teammates' runners |
 | `MAX_OPEN_PRS` | 8 | Review capacity is the real limit; a stack that outruns its owners rots |
 | `CI_MINUTES_PER_GOAL` | Set per repo | Hard stop; report Actions minutes spent per minute saved |
