@@ -11,7 +11,7 @@ TARGET_P90_MIN:        <from baseline>
 TARGET_FIRST_TRY_PASS: <from baseline>%
 MEASURE_WINDOW:        last 7 days, busy weekday hours only
 KEEP_BAR:              critical path -1 min, or a clear cost or flake cut
-RUNS_PER_ARM:          6 paired on the same SHA             # under 6 complete pairs = INCONCLUSIVE
+RUNS_PER_ARM:          6 paired on the same SHA
 MAX_CONCURRENT_ARMS:   4                                   # never above budgets.max_parallel_arms in .github/lever.yml
 MAX_OPEN_PRS:          8
 CI_MINUTES_PER_GOAL:   <cap>
